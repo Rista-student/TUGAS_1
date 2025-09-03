@@ -1,0 +1,111 @@
+/* === Style Dasar (Mobile-First) === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d0f0c0; /* hijau muda pastel */
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #ff2f92; /* pink fanta */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.profile {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.profile-pic {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Container grid untuk box === */
+.sections {
+  display: grid;
+  gap: 1rem; /* jarak antar box */
+  margin: 1rem;
+}
+
+/* === Kotak Putih Umum === */
+.box {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 15px;
+  min-height: 200px; /* tinggi seragam */
+}
+
+.box h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* === List Hobi === */
+.hobbies ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.hobbies li {
+  margin-bottom: 4px; /* rapatkan jarak antar item */
+  line-height: 1.4;
+}
+
+/* === Kontak === */
+.contact p {
+  margin: 4px 0; /* rapatkan jarak antar paragraf */
+  line-height: 1.4;
+}
+
+/* === Footer === */
+footer {
+  background: #ff2f92; /* pink fanta */
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  margin-top: 2rem;
+}
+
+/* === Media Query untuk Tablet/Desktop === */
+@media screen and (min-width: 768px) {
+  .profile-pic {
+    max-width: 300px;
+  }
+
+  .box {
+    font-size: 16px;
+    padding: 2rem;
+    min-height: 220px;
+  }
+
+  /* Grid 3 kolom sejajar */
+  .sections {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+}
+
+/* === Media Query tambahan untuk orientasi landscape === */
+@media screen and (orientation: landscape) {
+  header, footer {
+    background: #ff1493; /* pink fanta lebih terang saat landscape */
+  }
+}
